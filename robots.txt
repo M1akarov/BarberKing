@@ -1,0 +1,5 @@
+User-agent: *
+Crawl-delay: 10
+User-agent: Googlebot-Mobile
+Crawl-delay: 10
+Sitemap: http://delivery-lounge-if.com.ua//sitemap.xml
