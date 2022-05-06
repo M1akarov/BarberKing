@@ -1,6 +1,6 @@
 
 :root {
-  --header-height: 3rem;
+  --header-height: 4rem;
  /*========== Colors ==========*/
   --hue-color: 206;
   --black-color: #0b0a0a;
@@ -9,6 +9,7 @@
   --text-color: #c2bdbd;
   --text-color-light: #a9a2a2;
   --white-color: #fff;
+  --red-color: #f00;
   --body-color: #100f0f;
   --container-color: #1b1f1f;
   --text-gradient: linear-gradient(#DF9F28, #FDE08D, #8f6B29);
@@ -165,13 +166,13 @@ img {
 }
 .nav__logo {
   display: flex;
-  width: 2rem;
-  color: white;
+  color: #FDE08D;
 }
 .nav__toggle {
   font-size: 1.2rem;
   color: var(--white-color);
   cursor: pointer;
+  color: #FDE08D;
 }
 @media screen and (max-width: 767px) {
   .nav__menu {
@@ -255,10 +256,20 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
 }
+.home__suptitle {
+  position: absolute;
+  top: -6.5rem;
+  left: 0rem;
+  line-height: 5.8rem;
+  font-size: var(--big-font-size);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 .home__subtitle {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-2-5);
 }
+
 .home__title-description {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
@@ -321,7 +332,20 @@ img {
 /*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
-  right: 1rem;
+  left: 1rem;
+  bottom: -20%;
+  display: flex;
+  background-color: var(--container-color);
+  border-radius: 0.25rem;
+  padding: 0.45rem;
+  opacity: 9;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+}
+
+.scrollup--second {
+  position: fixed;
+  left: 1rem;
   bottom: -20%;
   display: flex;
   background-color: var(--container-color);
@@ -336,8 +360,8 @@ img {
   opacity: 1;
 }
 .scrollup__icon {
-  color: var(--white-color);
-  font-size: 1.35rem;
+  color: var(--red-color);
+  font-size: 2.35rem;
 }
 /* Show Scroll Up*/
 .show-scroll {
@@ -373,6 +397,9 @@ img {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
+ }
+ .ri-telegram-fill i{
+   font-size: 100px !important;
  }
   .section__title {
     font-size: var(--big-font-size);
@@ -470,7 +497,22 @@ img {
     height: calc(var(--header-height) + 1.5rem);
  }
   .nav__logo {
-    width: 2rem;
+    color: var(--white-color);
+    font-size:  var(--normal-font-size);
+    text-transform: uppercase;
+    font-weight: var(--font-semi-bold);
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: 0.4s;
+ }
+
+
+ .nav_logo:hover {
+    color: var(--white-color);
+    /* -webkit-background-clip: text; */
+    /* background-clip: text; */
  }
   .nav__list {
     flex-direction: row;
